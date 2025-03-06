@@ -18,6 +18,12 @@ const server = new Server({
     name: "mcp-memory",
     version: "0.1.0"
 });
+// Register tools capability
+server.registerCapabilities({
+    tools: {
+        listChanged: true
+    }
+});
 // Set up tool list handler
 server.setRequestHandler(ListToolsRequestSchema, async () => {
     return {
