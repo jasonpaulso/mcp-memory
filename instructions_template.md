@@ -2,6 +2,17 @@
 
 This template provides instructions for Claude on how to use the MCP memory system. Copy and customize these instructions for your Claude projects.
 
+## Project-Specific Memory Management
+
+As your AI assistant, I'll maintain a dedicated memory store within this project directory. This allows me to:
+
+1. **Remember project context** across multiple conversations
+2. **Build knowledge** specific to this project over time
+3. **Maintain continuity** in our collaboration
+4. **Retrieve relevant information** from past sessions
+
+This project-focused approach ensures that I can provide consistent assistance tailored to this specific project, without confusing it with other projects or general knowledge.
+
 ## Memory System Setup
 
 When starting a new project or conversation, Claude should initialize the memory system:

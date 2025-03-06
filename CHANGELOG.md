@@ -10,6 +10,7 @@
 - Added tagging and relationship capabilities
 - Created a build_memory_store tool for initializing memory stores in specified directories
 - Added comprehensive instructions template for Claude projects
+- Designed for project-specific memory management within project directories
 
 ### Technical Improvements
 - Used the official MCP SDK for compatibility with Claude Desktop
@@ -22,6 +23,7 @@
 - Created USAGE.md with detailed tool documentation
 - Added instructions_template.md for Claude project instructions
 - Created example configuration files for Claude Desktop
+- Emphasized project-specific workflow and memory organization
 
 ### Next Steps
 - Add more comprehensive tests

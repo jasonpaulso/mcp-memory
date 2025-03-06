@@ -51,18 +51,38 @@ You can also set a custom memory directory using an environment variable:
 
 ## Memory Structure
 
-Memories are stored in a hierarchical structure:
+Memories are stored in a hierarchical structure within your project directory:
 
 ```
-/memory
-  /entities/            # Information about specific entities (people, projects, etc.)
-  /concepts/            # Abstract concepts or knowledge
-  /sessions/            # Session-specific memories
-  /index.json           # Lunr.js search index
-  /metadata.json        # Overall memory metadata
+/your-project-directory
+  /memory                # Memory store created by Claude
+    /entities/           # Information about specific entities (people, projects, etc.)
+    /concepts/           # Abstract concepts or knowledge
+    /sessions/           # Session-specific memories
+    /index.json          # Lunr.js search index
+    /metadata.json       # Overall memory metadata
+    /README.md           # Auto-generated documentation
 ```
 
-Each memory is stored as a markdown file with frontmatter metadata.
+This structure keeps all project-related memories organized and accessible within your project directory, ensuring that Claude maintains context specific to each project.
+
+## Project-Specific Memory Management
+
+This MCP server is designed for project-based work with Claude Desktop. By creating a memory store within your project directory, Claude can:
+
+1. **Remember project context** across multiple conversations
+2. **Build knowledge** specific to this project over time
+3. **Maintain continuity** in your collaboration
+4. **Retrieve relevant information** from past sessions
+
+This approach is ideal for long-term projects where maintaining context between sessions is crucial, such as software development, research, writing, or any collaborative work with Claude.
+
+### Recommended Project Workflow
+
+1. **Setup**: When starting a new project with Claude, have it create a memory store in your project directory using the `build_memory_store` tool
+2. **Ongoing Work**: As you work with Claude, it will save important information to the memory store
+3. **Continuity**: In future sessions, Claude can retrieve relevant memories to maintain context
+4. **Knowledge Building**: Over time, Claude builds a comprehensive knowledge base about your project
 
 ## Available Tools
 
@@ -288,4 +308,4 @@ If you encounter issues with the MCP Memory Server:
 
 4. **Restart Claude Desktop**: Sometimes a simple restart can resolve connection issues.
 
-5. **Check Configuration**: Verify your `claude_desktop_config.json` file is correctly configured. 
+5. **Check Configuration**: Verify your `claude_desktop_config.json` file is correctly configured.
